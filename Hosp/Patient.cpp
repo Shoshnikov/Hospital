@@ -121,6 +121,12 @@ DateTime Patient::getLastXrayDate()
 	return lastXrayDate.Date;
 }
 
+String^ Patient::getLastXrayDateStr()
+{
+	String^ s = this->getLastXrayDate().Day.ToString() + "." + this->getLastXrayDate().Month.ToString() + "." + this->getLastXrayDate().Year.ToString();
+	return s;
+}
+
 void Patient::setLastXrayDate(DateTime lastXrayDate)
 {
 	this->lastXrayDate = lastXrayDate;

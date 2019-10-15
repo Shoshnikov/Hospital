@@ -356,7 +356,7 @@ namespace Hosp {
 	private: System::Void Add_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
 		Patient ^Pat = gcnew Patient(NameTB->Text,PatronymicTB->Text,LNameTB->Text,AddressTB->Text,WorkplaceTB->Text,VaccinationCB->Checked, dateTimePicker1->Value);
-		dataGridView1->Rows->Add(Pat->getName(), Pat->getLastname(), Pat->getPatronymic(), Pat->getAddress(), Pat->getWorkplace(), Pat->getVaccinationStr(), Pat->getLastXrayDate());
+		dataGridView1->Rows->Add(Pat->getName(), Pat->getLastname(), Pat->getPatronymic(), Pat->getAddress(), Pat->getWorkplace(), Pat->getVaccinationStr(), Pat->getLastXrayDateStr());
 		CellCount++;
 		clinic->Add(clinic->getBase(),Pat);
 	}
@@ -397,7 +397,7 @@ namespace Hosp {
 		dataGridView1->CurrentRow->Cells[3]->Value = clinic->getAtIndex(dataGridView1->CurrentRow->Index)->getWorkplace();
 		dataGridView1->CurrentRow->Cells[4]->Value = clinic->getAtIndex(dataGridView1->CurrentRow->Index)->getAddress();
 		dataGridView1->CurrentRow->Cells[5]->Value = clinic->getAtIndex(dataGridView1->CurrentRow->Index)->getVaccinationStr();
-		dataGridView1->CurrentRow->Cells[6]->Value = clinic->getAtIndex(dataGridView1->CurrentRow->Index)->getLastXrayDate();
+		dataGridView1->CurrentRow->Cells[6]->Value = clinic->getAtIndex(dataGridView1->CurrentRow->Index)->getLastXrayDateStr();
 	}
 
 	private: System::Void WithoutVaccinationB_Click(System::Object^ sender, System::EventArgs^ e) 
@@ -417,7 +417,7 @@ namespace Hosp {
 			dataGridView1->Rows[i]->Cells[3]->Value = clinic->getAtIndex(i)->getWorkplace();
 			dataGridView1->Rows[i]->Cells[4]->Value = clinic->getAtIndex(i)->getAddress();
 			dataGridView1->Rows[i]->Cells[5]->Value = clinic->getAtIndex(i)->getVaccinationStr();
-			dataGridView1->Rows[i]->Cells[6]->Value = clinic->getAtIndex(i)->getLastXrayDate();
+			dataGridView1->Rows[i]->Cells[6]->Value = clinic->getAtIndex(i)->getLastXrayDateStr();
 		}
 	}
 };

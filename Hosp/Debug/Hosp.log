@@ -1,3 +1,8 @@
 ﻿  Clinic.cpp
+  MyForm.cpp
+C:\Users\ivans\source\repos\Hosp\Hosp\MyForm.h(40,34): warning C4677:  clinic: сигнатура члена, не являющегося частным, содержит частный тип сборки "Clinic"
+  Patient.cpp
+  Создание кода...
+C:\Users\ivans\source\repos\Hosp\Hosp\Clinic.h(3): message :   см. объявление "Clinic"
   Clinic.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Hosp.vcxproj -> C:\Users\ivans\source\repos\Hosp\Debug\Hosp.exe

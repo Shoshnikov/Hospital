@@ -43,6 +43,7 @@ public:
 	void setVaccination(bool vaccination);
 
 	DateTime getLastXrayDate();
+	String^ getLastXrayDateStr();
 	void setLastXrayDate(DateTime lastXrayDate);
 };
 
